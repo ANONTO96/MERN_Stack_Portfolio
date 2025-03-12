@@ -60,7 +60,7 @@ const Skills = () => {
         <div className="space-y-10">
           {/* Technical Skills */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">" Technical Skills "</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">" Technical Skills "</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
               {skills.technical.map((category, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
@@ -83,7 +83,7 @@ const Skills = () => {
 
           {/* Soft Skills */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">" Soft Skills "</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">" Soft Skills "</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
               {skills.soft.map((skill, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-sm">

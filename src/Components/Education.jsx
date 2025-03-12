@@ -33,7 +33,7 @@ const Education = () => {
 
         <div className="space-y-8">
           {education.map((edu, index) => (
-            <div key={index} className="flex flex-col md:flex-row gap-4 items-start">
+            <div key={index} className="flex flex-col md:flex-row items-start">
               <div className="md:w-16 flex-shrink-0">
                 <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
                   <GraduationCap size={24} className="text-indigo-600" />

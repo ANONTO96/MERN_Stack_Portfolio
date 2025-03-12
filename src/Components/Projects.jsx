@@ -12,8 +12,8 @@ const Projects = () => {
     {
       title: "Restaurant Management System",
       image: Project1,
-      description: "Bistro Boss is a comprehensive restaurant management website built using the MERN stack (MongoDB, Express.js, React with Vite, and Node.js)...",
-      fullDescription: "Bistro Boss is a comprehensive restaurant management website built using the MERN stack (MongoDB, Express.js, React with Vite, and Node.js). This application aims to streamline restaurant operations, providing an intuitive interface for managing reservations, orders, menus, and staff.",
+      description: "Bistro Boss is a comprehensive restaurant management website built using the MERN stack (MongoDB, Express.js, React with Node.js...",
+      fullDescription: "Bistro Boss is a comprehensive restaurant management website built using the MERN stack (MongoDB, Express.js, React with Node.js, and Vite). This application aims to streamline restaurant operations, providing an intuitive interface for managing reservations, orders, menus, and staff.",
       tech: ["React", "Node.js", "MongoDB", "Express", "Redux", "Socket.io"],
       liveLink: "https://bistro-boss-c1e37.web.app/",
       githubLink: "https://github.com/ANONTO96/Bistro-Boss-Restaurant",
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "Connecting People for Shared Goals",
       image: Project2,
-      description: "Pair Promise is a platform designed to connect individuals with shared interests and goals, helping them build meaningful connections...",
+      description: "Pair Promise is a platform designed to connect individuals with shared interests and goals, helping them build meaningful...",
       fullDescription: "Pair Promise is a platform designed to connect individuals with shared interests and goals, helping them build meaningful connections and achieve mutual success.",
       tech: ["React", "Axios", "MongoDB", "Recharts", "JWT", "React Helmet", "SweetAlert2", "Swiper"],
       liveLink: "https://pair-promise.web.app/",
@@ -45,7 +45,7 @@ const Projects = () => {
     {
       title: "Empowering Communities",
       image: Project4,
-      description: "The Unity Pledge project is designed to bring individuals and communities together by fostering collaboration, mutual understanding, and collective growth...",
+      description: "The Unity Pledge project is designed to bring individuals and communities together by fostering collaboration...",
       fullDescription: "The Unity Pledge project is designed to bring individuals and communities together by fostering collaboration, mutual understanding, and collective growth. Users can take pledges, engage in community-driven initiatives, and track their contributions to building a more unified society.",
       tech: ["React", "Firebase", "TailwindCss", "Animate.css", "React-hot-toast", "Dark-Mode"],
       liveLink: "https://unity-pledge.netlify.app/",
@@ -64,19 +64,19 @@ const Projects = () => {
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 mx-2 sm:mx-8 lg:w-[90%] 2xl:w-full lg:mx-auto 2xl:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition h-full flex flex-col cursor-pointer"
+              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition h-full flex flex-col cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               {/* Image */}
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <img src={project.image} alt={project.title} className="w-full h-52 object-cover" />
 
               {/* Details */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <div className="px-6 pb-6 flex flex-col flex-grow">
+                <h3 className="text-xl text-gray-700 font-semibold my-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">
                   {project.description} 
                   <span className="text-blue-500 cursor-pointer" onClick={() => setSelectedProject(project)}> More</span>
