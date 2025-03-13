@@ -56,10 +56,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 transition">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900">Projects</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white transition">Projects</h2>
           <div className="mt-2 h-1 w-20 bg-indigo-600 mx-auto"></div>
         </div>
 
@@ -68,7 +68,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition h-full flex flex-col cursor-pointer"
+              className="bg-white dark:bg-gray-800 dark:hover:bg-base-100 dark:text-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition h-full flex flex-col cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               {/* Image */}
@@ -76,8 +76,8 @@ const Projects = () => {
 
               {/* Details */}
               <div className="px-6 pb-6 flex flex-col flex-grow">
-                <h3 className="text-xl text-gray-700 font-semibold my-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl text-gray-700 dark:text-white font-semibold my-2 transition">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {project.description} 
                   <span className="text-blue-500 cursor-pointer" onClick={() => setSelectedProject(project)}> More</span>
                 </p>
@@ -85,7 +85,7 @@ const Projects = () => {
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, i) => (
-                    <span key={i} className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">
+                    <span key={i} className="px-3 py-1 bg-indigo-100 text-indigo-600 hover:bg-indigo-200 dark:bg-indigo-200 dark:hover:bg-indigo-100 dark:text-indigo-700 transition rounded-full text-sm">
                       {tech}
                     </span>
                   ))}
@@ -93,11 +93,11 @@ const Projects = () => {
 
                 {/* Links */}
                 <div className="flex gap-4 mt-auto">
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700">
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
                     <ExternalLink size={16} />
                     Live Demo
                   </a>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-700">
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 transition">
                     <Github size={16} />
                     Code
                   </a>
@@ -111,35 +111,35 @@ const Projects = () => {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-3xl shadow-lg p-6 max-w-lg w-full relative">
+          <div className="bg-white dark:bg-gray-900 transition rounded-3xl shadow-lg p-6 max-w-lg w-full relative">
             <button 
-              className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-xl"
+              className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 hover:text-gray-900 text-xl"
               onClick={() => setSelectedProject(null)}
             >
               ✖
             </button>
-            <h3 className="text-2xl text-center text-gray-600 font-bold mb-4">{selectedProject.title}</h3>
+            <h3 className="text-2xl text-center text-gray-700 dark:text-gray-200 transition font-bold mb-4">{selectedProject.title}</h3>
             <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-52 object-cover rounded-lg mb-4" />
-            <p className="text-gray-700 mb-4">{selectedProject.fullDescription}</p>
-            <p className="text-gray-800 font-semibold">Features:</p>
-            <p className="text-gray-700 mb-4">{selectedProject.feature}</p>
-            <p className="text-gray-800 font-semibold">Challenges:</p>
-            <p className="text-gray-700 mb-4">{selectedProject.challenges}</p>
+            <p className="text-gray-700 dark:text-gray-400 transition mb-4">{selectedProject.fullDescription}</p>
+            <p className="text-gray-800 dark:text-gray-200 font-semibold">Features:</p>
+            <p className="text-gray-700 dark:text-gray-400 transition mb-4">{selectedProject.feature}</p>
+            <p className="text-gray-800 dark:text-gray-200 transition font-semibold">Challenges:</p>
+            <p className="text-gray-700 dark:text-gray-400 transition mb-4">{selectedProject.challenges}</p>
             
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-4">
               {selectedProject.tech.map((tech, i) => (
-                <span key={i} className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">
+                <span key={i} className="px-3 py-1 bg-indigo-100 hover:bg-indigo-200 text-indigo-600 dark:bg-indigo-200 dark:text-indigo-700 dark:hover:bg-indigo-100 rounded-full text-sm transition">
                   {tech}
                 </span>
               ))}
             </div>
 
             <div className="flex justify-end gap-4">
-              <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700">
+              <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 transition">
                 <ExternalLink size={16} /> Live Demo
               </a>
-              <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700">
+              <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 transition">
                 <Github size={16} /> Code
               </a>
             </div>

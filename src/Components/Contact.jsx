@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MessageSquare } from 'lucide-react';
 import toast, { Toaster } from "react-hot-toast";
+import bg from '../assets/authentication.png'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,17 +38,17 @@ const Contact = () => {
   
 
   return (
-    <section id="contact" className="pt-20 bg-gray-50">
+    <section id="contact" className="pt-20 bg-gray-50 dark:bg-gray-900">
       <Toaster position="top-right" reverseOrder={false} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900">Contact Me</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Contact Me</h2>
           <div className="mt-2 h-1 w-20 bg-indigo-600 mx-auto"></div>
         </div>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10">
           {/* Contact Info */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm space-y-8">
+          <div className="bg-white p-8 mb-6 rounded-2xl shadow-sm space-y-8" style={{backgroundImage: `url(${bg})`}}>
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Get in Touch</h3>
             
             <div className="flex items-center gap-4">
@@ -88,7 +89,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white py-7 px-5 rounded-2xl shadow-sm">
+          <div className="bg-white mb-6 py-7 px-5 rounded-2xl shadow-sm" style={{backgroundImage: `url(${bg})`}}>
       <h3 className="text-xl font-semibold text-gray-900 mb-6">Send a Message</h3>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
