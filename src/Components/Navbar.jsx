@@ -33,8 +33,8 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img className="w-7 h-7 mr-1" src={portfolioIcon} alt="logo" />
-            <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
+            <img className="w-8 h-8 mr-2" src={portfolioIcon} alt="logo" />
+            <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 align-middle">
               Portfolio
             </span>
           </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
             {/* Dark Mode Toggle (Desktop) */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+              className="p-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition"
             >
               {darkMode ? <Sun size={20} className="text-yellow-500" /> : <Moon size={20} className="text-gray-800" />}
             </button>
@@ -80,7 +80,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-gray-700 dark:text-gray-200 font-medium hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                className="block px-3 py-2 text-gray-700 dark:text-gray-200 font-medium hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-200 dark:hover:bg-gray-700 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

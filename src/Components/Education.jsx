@@ -35,7 +35,7 @@ const Education = () => {
           {education.map((edu, index) => (
             <div key={index} className="flex flex-col md:flex-row items-start">
               <div className="md:w-16 flex-shrink-0">
-                <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-300 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 mb-2 bg-indigo-100 dark:bg-indigo-300 rounded-full flex items-center justify-center">
                   <GraduationCap size={24} className="text-indigo-600 dark:text-indigo-800" />
                 </div>
               </div>

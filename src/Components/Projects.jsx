@@ -93,11 +93,12 @@ const Projects = () => {
 
                 {/* Links */}
                 <div className="flex gap-4 mt-auto">
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-indigo-600 
+                  hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300">
                     <ExternalLink size={16} />
                     Live Demo
                   </a>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 transition">
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200 transition">
                     <Github size={16} />
                     Code
                   </a>
@@ -111,7 +112,7 @@ const Projects = () => {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white dark:bg-gray-900 transition rounded-3xl shadow-lg p-6 max-w-lg w-full relative">
+          <div className="bg-white dark:bg-gray-900 transition rounded-3xl shadow-lg p-6 max-w-lg w-full top-7 relative">
             <button 
               className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 hover:text-gray-900 text-xl"
               onClick={() => setSelectedProject(null)}
@@ -136,10 +137,10 @@ const Projects = () => {
             </div>
 
             <div className="flex justify-end gap-4">
-              <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 transition">
+              <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 transition">
                 <ExternalLink size={16} /> Live Demo
               </a>
-              <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 transition">
+              <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200 transition">
                 <Github size={16} /> Code
               </a>
             </div>
