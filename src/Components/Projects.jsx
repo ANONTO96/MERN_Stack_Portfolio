@@ -32,7 +32,7 @@ const Projects = () => {
       feature: "The app leverages a range of libraries and tools, including Axios for API requests, Firebase for backend services, and Localforage for offline storage. React and related libraries enable dynamic UIs, navigation, and real-time feedback through features like toasts, charts, and customizable alerts."
     },
     {
-      title: "Assignment & Task Management",
+      title: "Assignment & Task Management System",
       image: Project3,
       description: "Assign Hub is a modern web application designed to help users manage assignments and tasks efficiently...",
       fullDescription: "Assign Hub is a modern web application designed to help users manage assignments and tasks efficiently. Built with React and Vite, the website offers a high-performance environment for developing React-based applications. It features fast development builds, live previews, and a user-friendly interface.",

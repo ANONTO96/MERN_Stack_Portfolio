@@ -12,7 +12,7 @@ const About = () => {
           <div className="mt-2 h-1 w-20 bg-indigo-600 dark:bg-indigo-400 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 mx-2">
           {/* Card 1 */}
           <div className="p-6 bg-gray-100 dark:bg-gray-800 dark:hover:bg-base-100 shadow-xl hover:shadow-2xl rounded-xl text-center transition">
             <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-700 rounded-full flex items-center justify-center mx-auto mb-4">

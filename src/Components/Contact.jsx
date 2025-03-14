@@ -48,7 +48,7 @@ const Contact = () => {
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10">
           {/* Contact Info */}
-          <div className="bg-white p-8 mb-6 rounded-2xl shadow-sm space-y-8" style={{backgroundImage: `url(${bg})`}}>
+          <div className="bg-white mx-4 mb-6 py-7 px-5 rounded-2xl shadow-sm space-y-8" style={{backgroundImage: `url(${bg})`}}>
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Get in Touch</h3>
             
             <div className="flex items-center gap-4">
@@ -89,7 +89,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white mb-6 py-7 px-5 rounded-2xl shadow-sm" style={{backgroundImage: `url(${bg})`}}>
+          <div className="bg-white mx-4 mb-6 py-7 px-5 rounded-2xl shadow-sm" style={{backgroundImage: `url(${bg})`}}>
       <h3 className="text-xl font-semibold text-gray-900 mb-6">Send a Message</h3>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>

@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img className="w-8 h-8 mr-2" src={portfolioIcon} alt="logo" />
+            <img className="w-8 h-8 mb-1 mr-2" src={portfolioIcon} alt="logo" />
             <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 align-middle">
               Portfolio
             </span>
