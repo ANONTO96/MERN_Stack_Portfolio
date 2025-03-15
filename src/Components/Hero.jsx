@@ -49,7 +49,7 @@ const Hero = () => {
             {/* Resume Button */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
-                href="https://drive.google.com/uc?export=download&id=1smSGILM-ARjQjDfpSoDppOrMPgcExaqs"
+                href="https://drive.google.com/uc?export=download&id=12isM-ifzZ8zvkzJMjOrh6K7SSGbO4ebH"
                 download="Tanjir-ul-Anonto_MERN_Stack_Dev_Resume.pdf"
                 className="px-8 py-3 bg-indigo-600 text-white shadow-xl hover:shadow-2xl rounded-lg hover:bg-indigo-700 transition flex items-center justify-center gap-2"
               >
